@@ -23,7 +23,7 @@ class PricePlanService:
 
         average = self.calculate_average_reading(readings)
         time_elapsed = calculate_time_elapsed(readings)
-        consumed_energy = average / time_elapsed
+        consumed_energy = average * time_elapsed
 
         price_plans = price_plan_repository.get()
 
